@@ -8,16 +8,18 @@ export const getTimeString = (now) => {
 const getNextYearDate = (now) => {
   const endOfYearDate = new Date(0);
   endOfYearDate.setUTCFullYear(now.getUTCFullYear() + 1);
-  console.log("this is  endOfYearDate", endOfYearDate);
   return endOfYearDate;
 };
-getNextYearDate();
 
 const getChristmasDate = (now) => {
   const endOfYearDate = new Date(0);
-  endOfYearDate.setUTCFullYear(now.getUTCFullYear() + 1);
+  endOfYearDate.setUTCFullYear(now.getUTCFullYear());
+  endOfYearDate.setUTCDate(24);
+  endOfYearDate.setUTCMonth(11);
   return endOfYearDate;
 };
+
+//console.log(getChristmasDate(new Date()));
 
 export const getSecondsLeftOfYear = (now) => {
   const startOfNextYear = getNextYearDate(now);
