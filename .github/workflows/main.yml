@@ -10,7 +10,6 @@ jobs:
         working-directory: ./code
     steps:
       - uses: actions/checkout@v3
-      
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -19,9 +18,8 @@ jobs:
       - run: npm run build
       - run: npm run lint
       - run: npm run test
-
-     - name: Archive artifacts
-       uses: actions/upload-artifact@v3
-       with:
-         name: artifact
-         path: ./code/dist
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: ./code/dist
