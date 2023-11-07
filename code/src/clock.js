@@ -34,3 +34,5 @@ export const getSecondsLeftChristmas = (now) => {
   const nowMillis = now.getTime();
   return Math.floor((startOfNextYearMillis - nowMillis) / 86400000);
 };
+
+console.log(getSecondsLeftChristmas(new Date()));
